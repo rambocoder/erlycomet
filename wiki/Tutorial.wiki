@@ -2,7 +2,7 @@
 
 == Introduction ==
 
-This document contains notes on getting the server up and running. 
+This document contains notes on building, configuring, running and testing the server. 
 
 === Getting the code === 
 
