@@ -1,0 +1,31 @@
+#summary Getting the server up and running
+
+== Introduction ==
+
+This document contains notes on getting the server up and running. 
+
+=== Getting the code === 
+
+Get the code from svn:
+{{{ 
+svn co http://erlycomet.googlecode.com/svn/trunk erlycomet
+}}}
+=== Compiling and configuring the server ===
+{{{ 
+cd erlycomet
+make 
+}}}
+=== Running the server === 
+{{{ 
+make run
+}}}
+This will start the server on Port 3000 and in an interactive erlang shell. 
+If you want to use a different port, then you have to edit the file `erlycomet.app` in the `ebin` directory. Ports < 1024 are currently not supported.
+
+
+=== Regenerating the documentation ===
+
+`make doc` does currently not work, run from the Erlang shell:
+{{{ 
+edoc:application('ErlyComet', ".", [no_packages]). 
+}}}
