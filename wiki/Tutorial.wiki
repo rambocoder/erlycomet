@@ -24,7 +24,7 @@ If you want to use a different port, then you have to edit the file `erlycomet.a
 
 === Testing the chat demo ===
 
-go to: http://localhost:3000/dijit/demos/chat.html
+go to: http://localhost:3000/dijit/demos/chat.html *not functional yet !!!*
 
 === Regenerating the documentation ===
 
