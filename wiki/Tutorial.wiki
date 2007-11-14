@@ -26,6 +26,12 @@ If you want to use a different port, then you have to edit the file `erlycomet.a
 
 Chat: http://localhost:3000/dijit/demos/chat.html *(not functional yet !!!)*
 
+Simple chat: http://localhost:3000/simplechat/index.html *(not functional yet !!!)*
+
+Echo http://localhost:3000/echo/index.html *(not functional yet !!!)*
+
+PongGame http://localhost:3000/dojopong/game.html *(doesen't even load !!!)*
+
 === Regenerating the documentation ===
 
 `make doc` does currently not work, run from the Erlang shell:
