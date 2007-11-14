@@ -26,7 +26,7 @@ If you want to use a different port, then you have to edit the file `erlycomet.a
 
  * Chat: http://localhost:3000/dijit/demos/chat.html *(not functional yet !!!)*
 
- * Simple: chat: http://localhost:3000/simplechat/index.html *(not functional yet !!!)*
+ * SimpleChat: http://localhost:3000/simplechat/index.html *(not functional yet !!!)*
 
  * Echo: http://localhost:3000/echo/index.html *(not functional yet !!!)*
 
