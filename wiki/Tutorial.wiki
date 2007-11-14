@@ -1,4 +1,4 @@
-#summary Getting the server up and running
+#summary First steps
 
 == Introduction ==
 
@@ -22,9 +22,9 @@ make run
 This will start the server on Port 3000 and in an interactive erlang shell. 
 If you want to use a different port, then you have to edit the file `erlycomet.app` in the `ebin` directory. Ports < 1024 are currently not supported.
 
-=== Testing the chat demo ===
+=== Examples and demos (straight from http://dojotoolkit.org and http://cometd.com) ===
 
-go to: http://localhost:3000/dijit/demos/chat.html *(not functional yet !!!)*
+Chat: http://localhost:3000/dijit/demos/chat.html *(not functional yet !!!)*
 
 === Regenerating the documentation ===
 
