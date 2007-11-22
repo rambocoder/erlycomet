@@ -4,8 +4,7 @@
 
 This document contains notes on building, configuring, running and testing the server. 
 
-*Important notice for windows users:* install cygwin first or rewrite the Makefie
-
+*Important notice for windows users:* install cygwin first or rewrite the Makefile for windows (and *post* it here please)
 === Getting the code === 
 
 Get the code from svn:
