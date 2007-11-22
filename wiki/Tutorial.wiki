@@ -22,6 +22,11 @@ make run
 This will start the server on Port 3000 and in an interactive erlang shell. 
 If you want to use a different port, then you have to edit the file `erlycomet.app` in the `ebin` directory. Ports < 1024 are currently not supported.
 
+If you want to experiment with cross domain Comet, you can easily start another server on Port 3001:
+{{{ 
+make runx
+}}}
+
 = Demo =
 
 Check the server status on the interactive Erlang shell:
