@@ -4,6 +4,8 @@
 
 This document contains notes on building, configuring, running and testing the server. 
 
+*Important notice for windows users:* install cygwin first or rewrite the Makefie
+
 === Getting the code === 
 
 Get the code from svn:
@@ -19,10 +21,10 @@ make
 {{{ 
 make run
 }}}
-This will start the server on Port 3000 and in an interactive erlang shell. 
+This will start the server on Port 3000 and open the interactive Erlang shell. 
 If you want to use a different port, then you have to edit the file `erlycomet.app` in the `ebin` directory. Ports < 1024 are currently not supported.
 
-If you want to experiment with cross domain Comet, you can easily start another server on Port 3001:
+If you want to experiment with cross domain Comet, you can easily start another server on Port 3001 (from another terminal):
 {{{ 
 make runx
 }}}
