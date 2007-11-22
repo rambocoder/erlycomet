@@ -23,7 +23,7 @@ make run
 This will start the server on Port 3000 and open the interactive Erlang shell. 
 If you want to use a different port, then you have to edit the file `erlycomet.app` in the `ebin` directory. Ports < 1024 are currently not supported.
 
-If you want to experiment with cross domain Comet, you can easily start another server on Port 3001 (from another terminal):
+If you want to experiment with cross domain Comet, you can easily start a second server on Port 3001 (from another terminal):
 {{{ 
 make runx
 }}}
@@ -49,3 +49,21 @@ ok
 }}}
 
 If you leave the browser window open, the server will disconnect after a timeout of 20 minutes (currently hard-coded).
+
+Start second client: http://localhost:3001/index.html
+
+the second client accesses cross-domain (via callback-polling) the first server. 
+Now check o both servers the status again and you should see on both the two connections.
+ 
+{{{
+erlycomet_demo:status().
+Connections: []
+ok
+(erlycomet@roberto-saccons-computer)3> erlycomet_demo:status().
+Connections: [{"48C7EC765D1DE3EFE14C388AAEB628C3",<0.102.0>},
+              {"3855F37603188BD7D3F703A240174C9",<0.101.0>}]
+ok
+(erlycomet@roberto-saccons-computer)4> 
+}}}
+
+Now you have a Comet cluster running. Congratulations ! If you want to run the nodes on different hosts, then you need a bit more configuration, but that is beyond the scope of this tutorial.
