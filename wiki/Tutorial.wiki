@@ -22,17 +22,32 @@ make run
 This will start the server on Port 3000 and in an interactive erlang shell. 
 If you want to use a different port, then you have to edit the file `erlycomet.app` in the `ebin` directory. Ports < 1024 are currently not supported.
 
-=== Examples and demos (straight from http://dojotoolkit.org and http://cometd.com) ===
+= Demo =
 
- * Chat: http://localhost:3000/dijit/demos/chat.html *(not functional yet !!!)*
+Check the server status on the interactive Erlang shell:
+{{{
+(erlycomet@roberto-saccons-computer)1> erlycomet_demo:status().
+Connections: []
+ok
+(erlycomet@roberto-saccons-computer)2>
+}}}
 
- * SimpleChat: http://localhost:3000/simplechat/index.html *(not functional yet !!!)*
+Start first client: http://localhost:3000/index.html
 
- * Echo: http://localhost:3000/echo/index.html *(not functional yet !!!)*
+Check the server status again, you should see now one connection:
+{{{
+(erlycomet@roberto-saccons-computer)2> erlycomet_demo:status().
+Connections: [{"3855F37603188BD7D3F703A240174C9",<0.101.0>}]
+ok
+(erlycomet@roberto-saccons-computer)3> 
+}}}
 
- * PongGame: http://localhost:3000/dojopong/game.html *(doesn't even load !!!)*
+If you leave the browser window open, after a (currently hard-coded) timeout of 20 minutes the server closes the connection.
 
-=== Regenerating the documentation ===
+
+=== Notes for ErlyComet contributors: ===
+
+Regenerating the documentation:
 
 `make doc` does currently not work, run from the Erlang shell:
 {{{ 
