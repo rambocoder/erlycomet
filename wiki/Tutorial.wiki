@@ -2,7 +2,9 @@
 
 == Introduction ==
 
-This document contains notes on building, configuring, running and testing the server. It is assumed that you have basic understanding of Erlang and Comet.
+This document contains notes on building, configuring, running and testing the server. 
+
+Target audience: developers with at least basic understanding of Erlang and Comet.
 
 *Important notice for windows users:* install cygwin first or rewrite the Makefile for windows (and *post* it here please)
 === Getting the code === 
