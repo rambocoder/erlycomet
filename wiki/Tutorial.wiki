@@ -1,4 +1,5 @@
 #summary First steps
+#labels Featured
 
 == Introduction ==
 
