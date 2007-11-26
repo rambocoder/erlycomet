@@ -14,6 +14,16 @@ Get the code from svn:
 {{{ 
 svn co http://erlycomet.googlecode.com/svn/trunk erlycomet
 }}}
+
+To run  the demo you will also need to install mochiweb.
+{{{ 
+svn checkout http://mochiweb.googlecode.com/svn/trunk/ mochiweb-read-only
+}}}
+Before continuing make sure that you've built mochiweb.  Also make sure that mochiweb's ebin directory is added to your code path.  You can do this by editing the make file and adding the mochiweb/ebin directory in all places you kick off erlang: 
+{{{
+$(ERL) -pa `pwd`/ebin -pa `pwd`/priv/ebin -pa <mochiweb/ebin/path>
+}}}
+
 === Compiling and configuring the server ===
 {{{ 
 cd erlycomet
@@ -24,7 +34,7 @@ make
 make run
 }}}
 This will start the server on Port 3000 and open the interactive Erlang shell. 
-If you want to use a different port, then you have to edit the file `erlycomet.app` in the `ebin` directory. Ports < 1024 are currently not supported.
+If you want to use a different port, then you have to edit the file `erlycomet.app` in the `ebin` directory. You'll also need to edit the erlycomet/demo-docroot/index.html. Ports < 1024 are currently not supported.
 
 If you want to experiment with cross domain Comet, you can easily start a second server on Port 3001 (from another terminal):
 {{{ 
