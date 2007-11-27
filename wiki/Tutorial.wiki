@@ -34,7 +34,7 @@ make
 make run
 }}}
 This will start the server on Port 3000 and open the interactive Erlang shell. 
-If you want to use a different port, then you have to edit the file `erlycomet.app` in the `ebin` directory. You'll also need to edit the erlycomet/demo-docroot/index.html. Ports < 1024 are currently not supported.
+If you want to use a different port, then you have to edit the file `erlycomet.app` in the `ebin` directory. You'll also need to edit the erlycomet/demo-docroot/index.html. For ports < 1024 your Erlang distribution needs to have fd_server package installed.
 
 If you want to experiment with cross domain Comet, you can easily start a second server on Port 3001 (from another terminal):
 {{{ 
