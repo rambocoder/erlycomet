@@ -32,7 +32,7 @@ If you want to experiment with cross domain Comet, you can easily start a second
 make runx
 }}}
 
-=== Demo (outdated - it's just still here to give you an idea how to get started)===
+=== Demo (outdated)===
 
 Check the server status on the interactive Erlang shell:
 {{{
@@ -42,7 +42,7 @@ ok
 (erlycomet_demo@Macintosh)2>
 }}}
 
-Start first client: http://localhost:3000/index.html
+Start first client: http://localhost:3000
 
 Check the server status again, you should see now one connection:
 {{{
@@ -54,7 +54,7 @@ ok
 
 If you leave the browser window open, the server will disconnect after a timeout of 20 minutes (currently hard-coded).
 
-Start second client: http://localhost:3001/index.html
+Start second client: http://localhost:3001
 
 the second client accesses cross-domain (via callback-polling) the first server. 
 Now check on both servers the status again and you should see on both the two connections.
