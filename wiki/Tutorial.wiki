@@ -37,7 +37,7 @@ make runx
 Check the server status on the interactive Erlang shell:
 {{{
 (erlycomet_demo@Macintosh)1> erlycomet_demo:status().
-Total commected clients: 0
+Total connected clients: 0
 
 ok
 (erlycomet_demo@Macintosh)2>
@@ -48,21 +48,21 @@ Start first client: http://localhost:3000
 Check the server status again, you should see now one connection:
 {{{
 (erlycomet_demo@Macintosh)2> erlycomet_demo:status().
-Total commected clients: 1
+Total cnnmected clients: 1
 
 ok
 (erlycomet_demo@Macintosh)3> 
 }}}
 
-now start the epoch-mod-1000 counter (which runs at server side and pushes its value to all connected clients) and check again tehe status:
+now start the epoch-mod-1000 counter (which runs at server side and pushes its value to all connected clients) and check again the status:
 
 {{{
-(erlycomet_demo@Macintosh)4> erlycomet_demo:status().
-Total commected clients: 2
+(erlycomet_demo@Macintosh)3> erlycomet_demo:status().
+Total connected clients: 2
 
 Channel: "/test/time"  Connected clients: 1
 ok
-(erlycomet_demo@Macintosh)5> 
+(erlycomet_demo@Macintosh)4> 
 }}}
 
 If you leave the browser window open, the server will disconnect after a timeout of 20 minutes (currently hard-coded).
@@ -74,12 +74,12 @@ Now check on both servers the status again and you should see on both the two co
  
 {{{
 erlycomet_demo:status().
-C(erlycomet_demo@Macintosh)5> erlycomet_demo:status().
-Total commected clients: 2
+(erlycomet_demo@Macintosh)4> erlycomet_demo:status().
+Total connected clients: 2
 
 Channel: "/test/time"  Connected clients: 1
 ok
-(erlycomet_demo@Macintosh)6> 
+(erlycomet_demo@Macintosh)5> 
 }}}
 
 Now you have a Comet cluster running. Congratulations ! If you want to run the nodes on different hosts, then you need a bit more configuration, but that is beyond the scope of this tutorial.
