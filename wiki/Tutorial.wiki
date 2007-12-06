@@ -32,7 +32,7 @@ If you want to experiment with cross domain Comet, you can easily start a second
 make runx
 }}}
 
-=== Demo ===
+=== Demo (outdated - it's just still here to give you an idea how to get started)===
 
 Check the server status on the interactive Erlang shell:
 {{{
