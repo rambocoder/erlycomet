@@ -12,21 +12,12 @@ Target audience: developers with at least basic understanding of Erlang and Come
 
 Get the code from svn:
 {{{ 
-svn co http://erlycomet.googlecode.com/svn/trunk erlycomet
-}}}
-
-To run  the demo you will also need to install mochiweb.
-{{{ 
-svn checkout http://mochiweb.googlecode.com/svn/trunk/ mochiweb-read-only
-}}}
-Before continuing make sure that you've built mochiweb.  Also make sure that mochiweb's ebin directory is added to your code path.  You can do this by editing the make file and adding the mochiweb/ebin directory in all places you kick off erlang: 
-{{{
-$(ERL) -pa `pwd`/ebin -pa `pwd`/priv/ebin -pa <mochiweb/ebin/path>
+svn co http://erlycomet.googlecode.com/svn/trunk erlycomet-read-only
 }}}
 
 === Compiling and configuring the server ===
 {{{ 
-cd erlycomet
+cd erlycomet-read-only
 make 
 }}}
 === Running the server === 
@@ -45,20 +36,20 @@ make runx
 
 Check the server status on the interactive Erlang shell:
 {{{
-(erlycomet@roberto-saccons-computer)1> erlycomet_demo:status().
+(erlycomet_demo@Macintosh)1> erlycomet_demo:status().
 Connections: []
 ok
-(erlycomet@roberto-saccons-computer)2>
+(erlycomet_demo@Macintosh)2>
 }}}
 
 Start first client: http://localhost:3000/index.html
 
 Check the server status again, you should see now one connection:
 {{{
-(erlycomet@roberto-saccons-computer)2> erlycomet_demo:status().
+(erlycomet_demo@Macintosh)2> erlycomet_demo:status().
 Connections: [{"3855F37603188BD7D3F703A240174C9",<0.101.0>}]
 ok
-(erlycomet@roberto-saccons-computer)3> 
+(erlycomet_demo@Macintosh)3> 
 }}}
 
 If you leave the browser window open, the server will disconnect after a timeout of 20 minutes (currently hard-coded).
@@ -72,11 +63,11 @@ Now check on both servers the status again and you should see on both the two co
 erlycomet_demo:status().
 Connections: []
 ok
-(erlycomet@roberto-saccons-computer)3> erlycomet_demo:status().
+(erlycomet_demo@Macintosh)3> erlycomet_demo:status().
 Connections: [{"48C7EC765D1DE3EFE14C38AAEB628C3",<0.102.0>},
               {"3855F37603188BD7D3F703A240174C9",<0.101.0>}]
 ok
-(erlycomet@roberto-saccons-computer)4> 
+(erlycomet_demo@Macintosh)4> 
 }}}
 
 Now you have a Comet cluster running. Congratulations ! If you want to run the nodes on different hosts, then you need a bit more configuration, but that is beyond the scope of this tutorial.
