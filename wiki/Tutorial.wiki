@@ -46,10 +46,11 @@ Start first client: http://localhost:3000
 
 Check the server status again, you should see now one connection:
 {{{
-(erlycomet_demo@Macintosh)2> erlycomet_demo:status().
-Connections: [{"3855F37603188BD7D3F703A240174C9",<0.101.0>}]
+(erlycomet_demo@Macintosh)1> erlycomet_demo:status().
+Total commected clients: 1
+
 ok
-(erlycomet_demo@Macintosh)3> 
+(erlycomet_demo@Macintosh)2> 
 }}}
 
 If you leave the browser window open, the server will disconnect after a timeout of 20 minutes (currently hard-coded).
@@ -61,11 +62,10 @@ Now check on both servers the status again and you should see on both the two co
  
 {{{
 erlycomet_demo:status().
-Connections: []
-ok
-(erlycomet_demo@Macintosh)3> erlycomet_demo:status().
-Connections: [{"48C7EC765D1DE3EFE14C38AAEB628C3",<0.102.0>},
-              {"3855F37603188BD7D3F703A240174C9",<0.101.0>}]
+C(erlycomet_demo@Macintosh)3> erlycomet_demo:status().
+Total commected clients: 2
+
+Channel: "/test/time"  Connected clients: 1
 ok
 (erlycomet_demo@Macintosh)4> 
 }}}
