@@ -83,3 +83,6 @@ ok
 }}}
 
 Now you have a Comet cluster running. Congratulations ! If you want to run the nodes on different hosts, then you need a bit more configuration, but that is beyond the scope of this tutorial.
+
+=== Demo 2===
+http://localhost:3000/dijit/demos/chat.html
