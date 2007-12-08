@@ -85,4 +85,4 @@ ok
 (erlycomet_demo@Macintosh)5> 
 }}}
 
-Now have fun with the chat demo
+Now have fun with the chat demo !
