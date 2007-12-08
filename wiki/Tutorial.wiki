@@ -33,8 +33,9 @@ If you want to experiment with cross domain Comet, you can easily start a second
 {{{ 
 make runx
 }}}
+In a real world application you probably are going to run the cluster nodes on different hosts.
 
-===Demo===
+===Demos===
 
 Check the server status on the interactive Erlang shell:
 {{{
@@ -84,4 +85,4 @@ ok
 (erlycomet_demo@Macintosh)5> 
 }}}
 
-Now you have a Comet cluster running. Congratulations ! If you want to run the nodes on different hosts, then you need a bit more configuration, but that is beyond the scope of this tutorial.
+Now have fun with the chat demo
