@@ -5,7 +5,9 @@
 
 This document contains notes on building, configuring, running and testing the server. 
 
-Target audience: developers with at least basic understanding of Erlang and Comet.
+Target audience: developers with at least basic understanding Comet.
+
+Requirements: Erlang has to be installed on your system (get the sources from: http://www.erlang.org/download.html or pre-compiled: http://cean.process-one.net/download/)
 
 *Important notice for windows users:* install cygwin first or rewrite the Makefile for windows (and *post* it here please)
 === Getting the code === 
