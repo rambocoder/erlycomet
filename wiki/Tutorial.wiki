@@ -32,7 +32,7 @@ If you want to experiment with cross domain Comet, you can easily start a second
 make runx
 }}}
 
-=== Demo 1===
+===Demo===
 
 Check the server status on the interactive Erlang shell:
 {{{
@@ -83,6 +83,3 @@ ok
 }}}
 
 Now you have a Comet cluster running. Congratulations ! If you want to run the nodes on different hosts, then you need a bit more configuration, but that is beyond the scope of this tutorial.
-
-=== Demo 2===
-http://localhost:3000/dijit/demos/chat.html
