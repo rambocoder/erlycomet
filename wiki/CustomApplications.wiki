@@ -1,10 +1,10 @@
 #summary Custom applications
 
-====Calling ErlyComet handler (from MochiWeb)====
-{{
+====Calling !ErlyComet handler (from !MochiWeb)====
+{{{
 ErlyCometRequest = erlycomet_request:new(erlycomet_demo_rpc),
 ErlyCometRequest:handle(Req);
-}}
+}}}
 `my_app` is the module name of your custom application
 
 ====What you need to do at the Javascript client app====
