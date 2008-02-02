@@ -1,4 +1,4 @@
-#summary Custom applications
+#summary get started with ErlyComet custom applications
 
 ====1) Calling !ErlyComet handler (from !MochiWeb)====
 E.g. with `erlycomet_demo_rpc` as the module name of your custom application
