@@ -14,7 +14,7 @@ dojox.cometd.publish("/rpc/test", { id:rpc._id, method:"delayed_echo", params:[t
 }}}
 
 ====Erlang custom app====
- * FunctionName: as specified in your JSON-RPC object 
+ * Function name: as specified in your JSON-RPC object 
  * Arguments: first Arg contains channel name, following args are as defined in JSON-RPC object
 Example (from demo):
 {{{
