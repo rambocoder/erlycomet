@@ -1,6 +1,9 @@
 #summary Collaborative drawing demo
 
-=Collaborative drawing=
+based on dojox.sketch drawing application, itegrated with chat chat aapplication but we do not chat, we do collaborative drawing !
+
+=Installation=
+(hopefully this will get easier in the future)
  * install dojo, dojox and dijit (from SVN) into demo-docroot (because it won't work with dojo from AOL CDN)
 
  * apply this patch to dojox.sketch.!UndoStack.js:
