@@ -1,10 +1,9 @@
 #summary Collaborative drawing demo
 
 =Collaborative drawing=
- * install dojo, dojox and dijit (from SVN) into demo-docroot
-   (because it won't work with dojo from AOL CDN)
+ * install dojo, dojox and dijit (from SVN) into demo-docroot (because it won't work with dojo from AOL CDN)
 
- * apply this patch to dojox.sketch.UndoStack.js:
+ * apply this patch to !dojox.sketch.UndoStack.js:
 {{{
 +++ UndoStack.js
 @@ -78,6 +78,9 @@
