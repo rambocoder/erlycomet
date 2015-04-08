@@ -1,0 +1,85 @@
+## Introduction ##
+
+This document contains notes on building, configuring, running and testing the server.
+
+Target audience: developers with at least basic understanding Comet.
+
+Requirements: Erlang has to be installed on your system (get the sources from: http://www.erlang.org/download.html or pre-compiled: http://cean.process-one.net/download/)
+
+**Important notice for windows users:** install cygwin first or rewrite the Makefile for windows (and **post it here** please)
+### Getting the code ###
+
+Get the code from svn:
+```
+svn co http://erlycomet.googlecode.com/svn/trunk erlycomet-read-only
+```
+
+### Compiling and configuring the server ###
+```
+cd erlycomet-read-only
+make 
+```
+### Running the server ###
+```
+make run
+```
+This will start the server on Port 3000 and open the interactive Erlang shell.
+If you want to use a different port, then you have to edit the file `erlycomet.app` in the `ebin` directory. You'll also need to edit the erlycomet/demo-docroot/index.html. For ports < 1024 your Erlang distribution needs to have fd\_server package installed.
+
+If you want to experiment with cross domain Comet, you can easily start a second server on Port 3001 (from another terminal):
+```
+make runx
+```
+In a real world application you probably are going to run the cluster nodes on different hosts.
+
+### Demos ###
+
+Check the server status on the interactive Erlang shell:
+```
+(erlycomet_demo@Macintosh)1> erlycomet_demo:status().
+Total connected clients: 0
+
+ok
+(erlycomet_demo@Macintosh)2>
+```
+
+Start first client: http://localhost:3000
+
+Check the server status again, you should see now one connection:
+```
+(erlycomet_demo@Macintosh)2> erlycomet_demo:status().
+Total cnnmected clients: 1
+
+ok
+(erlycomet_demo@Macintosh)3> 
+```
+
+now start the epoch-mod-1000 counter (which runs at server side and pushes its value to all connected clients) and check again the status:
+
+```
+(erlycomet_demo@Macintosh)3> erlycomet_demo:status().
+Total connected clients: 2
+
+Channel: "/test/time"  Connected clients: 1
+ok
+(erlycomet_demo@Macintosh)4> 
+```
+
+If you leave the browser window open, the server will disconnect after a timeout of 20 minutes (currently hard-coded).
+
+Start second client: http://localhost:3001
+
+the second client accesses cross-domain (via callback-polling) the first server.
+Now check on both servers the status again and you should see on both the two connections.
+
+```
+erlycomet_demo:status().
+(erlycomet_demo@Macintosh)4> erlycomet_demo:status().
+Total connected clients: 2
+
+Channel: "/test/time"  Connected clients: 1
+ok
+(erlycomet_demo@Macintosh)5> 
+```
+
+Now have fun with the chat demo !
